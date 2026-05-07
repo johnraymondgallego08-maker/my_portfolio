@@ -2,6 +2,7 @@
 
 import { useCallback, useMemo, useState } from "react";
 import { Button } from "@/components/atoms/Button";
+import { GridIcon, LayersIcon, SearchIcon, TagIcon } from "@/components/atoms/Icons";
 import { ProjectGalleryModal } from "@/components/molecules/ProjectGalleryModal";
 import { ProjectCard } from "@/components/molecules/ProjectCard";
 import { ALL_FILTER_VALUE, filterProjects } from "@/lib/filters";
@@ -60,11 +61,17 @@ export function WorkGallery({
   return (
     <section aria-labelledby="work-gallery-title" className="space-y-8">
       <div className="animated-border panel-gradient space-y-4 rounded-md border border-clay/15 p-5 shadow-soft transition duration-300 hover:shadow-glow">
-        <h2 className="text-2xl font-bold tracking-normal text-ink" id="work-gallery-title">
+        <h2 className="inline-flex items-center gap-3 text-2xl font-bold tracking-normal text-ink" id="work-gallery-title">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-clay/15 bg-clay/10 text-clay shadow-soft">
+            <GridIcon className="h-5 w-5" />
+          </span>
           Activity Gallery
         </h2>
         <label className="block max-w-xl space-y-2">
-          <span className="text-sm font-semibold text-navy">Search projects</span>
+          <span className="inline-flex items-center gap-2 text-sm font-semibold text-navy">
+            <SearchIcon className="h-4 w-4 text-clay" />
+            Search projects
+          </span>
           <input
             className="min-h-11 w-full rounded-md border border-clay/15 bg-white px-4 text-sm text-ink shadow-soft transition duration-300 placeholder:text-steel focus:border-clay focus:outline-none focus:ring-2 focus:ring-clay/20"
             onChange={(event) => setSearch(event.target.value)}
@@ -131,9 +138,14 @@ function FilterGroup({
   selected: string;
   onSelect: (value: string) => void;
 }) {
+  const Icon = label === "Category" ? TagIcon : LayersIcon;
+
   return (
     <fieldset className="space-y-3">
-      <legend className="text-sm font-semibold text-navy">{label}</legend>
+      <legend className="inline-flex items-center gap-2 text-sm font-semibold text-navy">
+        <Icon className="h-4 w-4 text-clay" />
+        {label}
+      </legend>
       <div className="flex flex-wrap gap-2">
         <Button
           aria-pressed={selected === ALL_FILTER_VALUE}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LayersIcon } from "@/components/atoms/Icons";
 import { WorkGallery } from "@/components/molecules/WorkGallery";
 import {
   getProjectCategories,
@@ -24,7 +25,8 @@ export default function WorkPage() {
         <div className="pointer-events-none absolute left-0 top-0 h-28 w-full animate-scan-line bg-gradient-to-b from-transparent via-moss/20 to-transparent" />
         <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4 motion-safe:animate-fade-up">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-orange-300">
+            <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-orange-300">
+              <LayersIcon className="h-4 w-4" />
               Project Work
             </p>
             <h1 className="text-3xl font-black tracking-normal text-orange-300 sm:text-5xl">

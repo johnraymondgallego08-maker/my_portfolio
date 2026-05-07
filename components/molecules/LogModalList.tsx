@@ -18,10 +18,10 @@ export function LogModalList({ logs }: { logs: LogEntry[] }) {
 
   return (
     <>
-      <section className="grid gap-5 md:grid-cols-2" aria-label="Weekly logs">
+      <section className="grid items-stretch gap-5 md:grid-cols-2" aria-label="Weekly logs">
         {logs.map((log, index) => (
           <div
-            className="motion-safe:animate-scale-in"
+            className="h-full motion-safe:animate-scale-in"
             key={log.slug}
             style={{ animationDelay: `${index * 80}ms` }}
           >

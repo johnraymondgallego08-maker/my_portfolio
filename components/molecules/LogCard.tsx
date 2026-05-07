@@ -25,7 +25,7 @@ export function LogCard({
   );
 
   return (
-    <article className="interactive-card panel-gradient group rounded-md border border-clay/15 p-5 shadow-soft transition duration-500 hover:-translate-y-2 hover:border-clay/35 hover:shadow-lift">
+    <article className="interactive-card panel-gradient group flex h-full flex-col rounded-md border border-clay/15 p-5 shadow-soft transition duration-500 hover:-translate-y-2 hover:border-clay/35 hover:shadow-lift">
       <div className="mb-4 flex flex-wrap items-center gap-2 text-sm font-medium text-steel">
         <time dateTime={log.date}>{formatDate(log.date)}</time>
         <span className="text-moss" aria-hidden="true">/</span>
@@ -34,7 +34,7 @@ export function LogCard({
       <h2 className="break-words text-xl font-bold tracking-normal text-ink transition duration-300 group-hover:text-navy">
         {titleContent}
       </h2>
-      <p className="mt-3 text-sm leading-6 text-slate-600">{log.summary}</p>
+      <p className="mt-3 flex-1 text-sm leading-6 text-slate-600">{log.summary}</p>
       <div className="mt-5 flex flex-wrap gap-2" aria-label={`${log.title} tags`}>
         {log.tags.map((tag) => (
           <Badge key={tag} variant="accent">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { GridIcon, SearchIcon, TagIcon } from "@/components/atoms/Icons";
 import { LogModalList } from "@/components/molecules/LogModalList";
 import type { LogEntry } from "@/lib/types";
 
@@ -31,11 +32,17 @@ export function LogFilterList({ logs }: { logs: LogEntry[] }) {
   return (
     <section className="space-y-8" aria-labelledby="log-filter-title">
       <div className="animated-border panel-gradient space-y-4 rounded-md border border-clay/15 p-5 shadow-soft transition duration-300 hover:shadow-glow">
-        <h2 className="text-2xl font-bold tracking-normal text-ink" id="log-filter-title">
+        <h2 className="inline-flex items-center gap-3 text-2xl font-bold tracking-normal text-ink" id="log-filter-title">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-clay/15 bg-clay/10 text-clay shadow-soft">
+            <GridIcon className="h-5 w-5" />
+          </span>
           Activity logs
         </h2>
         <label className="block max-w-xl space-y-2">
-          <span className="text-sm font-semibold text-navy">Search logs</span>
+          <span className="inline-flex items-center gap-2 text-sm font-semibold text-navy">
+            <SearchIcon className="h-4 w-4 text-clay" />
+            Search logs
+          </span>
           <input
             className="min-h-11 w-full rounded-md border border-clay/15 bg-white px-4 text-sm text-ink shadow-soft transition duration-300 placeholder:text-steel focus:border-clay focus:outline-none focus:ring-2 focus:ring-clay/20"
             onChange={(event) => setSearch(event.target.value)}
@@ -45,7 +52,10 @@ export function LogFilterList({ logs }: { logs: LogEntry[] }) {
           />
         </label>
         <div className="space-y-3">
-          <p className="text-sm font-semibold text-navy">Filter by tag</p>
+          <p className="inline-flex items-center gap-2 text-sm font-semibold text-navy">
+            <TagIcon className="h-4 w-4 text-clay" />
+            Filter by tag
+          </p>
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
               <button
