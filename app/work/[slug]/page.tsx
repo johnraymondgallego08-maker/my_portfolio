@@ -89,15 +89,6 @@ export default async function ProjectDetail({ params }: Props) {
         </div>
 
         <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start">
-          {project.liveUrl ? (
-            <Link
-              className="inline-flex min-h-11 w-full items-center justify-center rounded-md bg-moss px-4 text-sm font-semibold text-ink transition duration-300 hover:-translate-y-0.5 hover:bg-[#ffdc5e]"
-              href={project.liveUrl}
-              target="_blank"
-            >
-              Open live project
-            </Link>
-          ) : null}
           {project.repositoryUrl ? (
             <Link
               className="inline-flex min-h-11 w-full items-center justify-center rounded-md bg-navy px-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-clay"
