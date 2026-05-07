@@ -1,6 +1,6 @@
 ---
 title: H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL Week 04: UI Polish and Recognition
-date: 2026-04-17
+date: 2026-04-03
 summary: Polished H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL UI details and improved announcement, attendance summary, device recognition, and invoice screens.
 tags: H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL, Tailwind CSS, UI
 ---

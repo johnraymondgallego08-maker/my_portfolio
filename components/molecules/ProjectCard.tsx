@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Badge } from "@/components/atoms/Badge";
-import { formatDate } from "@/lib/format";
+import { formatDateRange } from "@/lib/format";
 import { getProjectImage } from "@/lib/project-images";
 import type { Project } from "@/lib/types";
 
@@ -52,8 +53,8 @@ export function ProjectCard({
         <div className="space-y-3">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="success">{project.category}</Badge>
-            <time className="text-sm font-medium text-steel" dateTime={project.completionDate}>
-              {formatDate(project.completionDate)}
+            <time className="text-sm font-medium text-steel" dateTime={project.startDate ?? project.completionDate}>
+              {formatDateRange(project.startDate, project.completionDate)}
             </time>
           </div>
           <h3 className="break-words text-xl font-bold tracking-normal text-ink transition duration-300 group-hover:text-navy">{project.title}</h3>
@@ -74,7 +75,14 @@ export function ProjectCard({
               >
                 View full
               </button>
-            ) : null}
+            ) : (
+              <Link
+                className="inline-flex min-h-11 min-w-0 items-center justify-center rounded-md bg-navy px-4 text-center text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-clay"
+                href={`/work/${project.id}`}
+              >
+                View full
+              </Link>
+            )}
             {project.repositoryUrl ? (
               <details className="w-full rounded-md border border-clay/15 bg-gradient-to-br from-skywash/60 to-white/80 px-4 py-2 text-sm text-slate-700">
                 <summary className="flex min-h-11 cursor-pointer items-center font-semibold text-navy transition hover:text-clay">

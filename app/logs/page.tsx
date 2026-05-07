@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { LogModalList } from "@/components/molecules/LogModalList";
+import { LogFilterList } from "@/components/molecules/LogFilterList";
 import { getLogs } from "@/lib/logs";
 
 export const metadata: Metadata = {
   title: "Logs",
   description:
-    "Weekly notes about Node.js, EJS, Tailwind CSS, and the H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL project."
+    "Search and filter weekly build notes about Node.js, EJS, Tailwind CSS, and the H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL project."
 };
 
 export default async function LogsPage() {
@@ -25,13 +25,13 @@ export default async function LogsPage() {
               Weekly notes from practice to real project deployment.
             </h1>
             <p className="text-base leading-7 text-orange-200 sm:text-lg sm:leading-8">
-              Notes from learning Node.js and building the H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL system.
+              Search by title or summary, then filter by log tags and dates.
             </p>
           </div>
         </div>
       </header>
       <div className="mx-auto max-w-6xl px-4 py-12 motion-safe:animate-fade-up sm:px-6 lg:px-8">
-        <LogModalList logs={logs} />
+        <LogFilterList logs={logs} />
       </div>
     </div>
   );

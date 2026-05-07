@@ -1,6 +1,6 @@
 ---
 title: H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL Week 02: Core Feature Enhancements
-date: 2026-04-01
+date: 2026-03-20
 summary: Improved H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL login, dashboard, employee, leave, overtime, payroll, and monitoring features.
 tags: H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL, Attendance, Payroll
 ---

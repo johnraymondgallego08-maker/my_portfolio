@@ -1,426 +1,62 @@
 [
   {
+    "id": "h4m-workforce",
     "title": "H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL",
-    "brief": "Full-stack admin system for employee records, attendance monitoring, payroll workflows, reports, and Vercel deployment.",
-    "description": "Built the frontend and backend for H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL, including employee records, attendance monitoring, payroll workflows, reports, and Vercel deployment.",
-    "fullDetails": [
-      "Created the frontend admin panel with EJS and Tailwind CSS for dashboard, attendance, payroll, profile, invoice, announcements, and user management screens.",
-      "Built backend workflows with Node.js to support workforce records, monitoring pages, employee-related features, and admin panel navigation.",
-      "Improved the project weekly through feature enhancements, UI polish, device recognition work, invoice improvements, and final deployment preparation in Vercel."
-    ],
-    "techStack": ["Node.js", "EJS", "Tailwind CSS", "Vercel"],
+    "description": "Full-stack admin system for employee records, attendance monitoring, payroll workflows, and reports.",
+    "tags": ["Node.js", "EJS", "Tailwind CSS", "Vercel"],
+    "startDate": "2026-03-13",
     "completionDate": "2026-04-24",
-    "category": "Real Project",
-    "featured": true,
-    "repositoryUrl": "https://github.com/johnraymondgallego08-maker/Hack4mapandan_Workforce_Accountability_Attendance_AdminWeb.git",
-    "image": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/project%20profile.png",
-    "gallery": [
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/project%20profile.png",
-        "alt": "H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL project profile screen",
-        "group": "Project Overview",
-        "caption": "Project profile for the H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL system."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/employee%20directory.png",
-        "alt": "H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL employee directory screen",
-        "group": "Project Overview",
-        "caption": "Employee directory screen for managing workforce records."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20brainstorm.png",
-        "alt": "Week 1 brainstorm",
-        "group": "Week 1",
-        "caption": "Brainstorming and early planning for the admin panel workflow."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20brainstorm%202.png",
-        "alt": "Week 1 brainstorm second screen",
-        "group": "Week 1",
-        "caption": "Additional planning notes and interface ideas for the project."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20%20static%20dashboard.png",
-        "alt": "Week 1 static dashboard",
-        "group": "Week 1",
-        "caption": "Initial static dashboard layout."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20static%20dashboard%202.png",
-        "alt": "Week 1 static dashboard second version",
-        "group": "Week 1",
-        "caption": "Second version of the static dashboard layout."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20static%20page%20sample.png",
-        "alt": "Week 1 static page sample",
-        "group": "Week 1",
-        "caption": "Static page sample for the admin interface."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/weel%201%20static%20page%20lay%20out.png",
-        "alt": "Week 1 static page layout",
-        "group": "Week 1",
-        "caption": "Static page layout draft."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20back%20end%20(1).png",
-        "alt": "Week 1 backend screen 1",
-        "group": "Week 1",
-        "caption": "Backend setup progress."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20back%20end%20(2).png",
-        "alt": "Week 1 backend screen 2",
-        "group": "Week 1",
-        "caption": "Backend setup progress."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20back%20end%20(3).png",
-        "alt": "Week 1 backend screen 3",
-        "group": "Week 1",
-        "caption": "Backend setup progress."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20back%20end%20(4).png",
-        "alt": "Week 1 backend screen 4",
-        "group": "Week 1",
-        "caption": "Backend setup progress."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20back%20end%20(5).png",
-        "alt": "Week 1 backend screen 5",
-        "group": "Week 1",
-        "caption": "Backend setup progress."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%201%20back%20end%20(6).png",
-        "alt": "Week 1 backend screen 6",
-        "group": "Week 1",
-        "caption": "Backend setup progress."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%202%20enhance%20log%20in%20page.png",
-        "alt": "Week 2 enhanced login page",
-        "group": "Week 2",
-        "caption": "Enhanced login page design."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%202%20added%20log%20and%20holiday%20widgets%20in%20dashboard.png",
-        "alt": "Week 2 dashboard logs and holiday widgets",
-        "group": "Week 2",
-        "caption": "Dashboard updates with log and holiday widgets."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%202%20add%20employee%20feature%20enhancement.png",
-        "alt": "Week 2 add employee enhancement",
-        "group": "Week 2",
-        "caption": "Add employee feature enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%202%20announcement%20and%20event%20feature.png",
-        "alt": "Week 2 announcement and event feature",
-        "group": "Week 2",
-        "caption": "Announcement and event feature."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%202%20image%20recognition.png",
-        "alt": "Week 2 image recognition",
-        "group": "Week 2",
-        "caption": "Image recognition feature progress."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%202%20leave%20page%20enhancement.png",
-        "alt": "Week 2 leave page enhancement",
-        "group": "Week 2",
-        "caption": "Leave page enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%202%20monitor%20enhancement.png",
-        "alt": "Week 2 monitor enhancement",
-        "group": "Week 2",
-        "caption": "Monitoring page enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%202%20overtime%20page%20enhancement.png",
-        "alt": "Week 2 overtime page enhancement",
-        "group": "Week 2",
-        "caption": "Overtime page enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%202%20payroll%20enhancement.png",
-        "alt": "Week 2 payroll enhancement",
-        "group": "Week 2",
-        "caption": "Payroll page enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%203%20dashbopard%20enhaancement.png",
-        "alt": "Week 3 dashboard enhancement",
-        "group": "Week 3",
-        "caption": "Dashboard enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%203%20attendance%20enhancement.png",
-        "alt": "Week 3 attendance enhancement",
-        "group": "Week 3",
-        "caption": "Attendance page enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%203%20manage%20user.png",
-        "alt": "Week 3 manage user",
-        "group": "Week 3",
-        "caption": "Manage user screen."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%203%20payroll%20enhancement.png",
-        "alt": "Week 3 payroll enhancement",
-        "group": "Week 3",
-        "caption": "Payroll enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%203%20pop%20up%20invoice.png",
-        "alt": "Week 3 pop up invoice",
-        "group": "Week 3",
-        "caption": "Invoice popup feature."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%203%20profile%20enhancement.png",
-        "alt": "Week 3 profile enhancement",
-        "group": "Week 3",
-        "caption": "Profile page enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%204%20ui%20improvements.png",
-        "alt": "Week 4 UI improvements",
-        "group": "Week 4",
-        "caption": "UI improvements across the admin panel."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%204%20announcement%20and%20event%20enhancement.png",
-        "alt": "Week 4 announcement and event enhancement",
-        "group": "Week 4",
-        "caption": "Announcement and event enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%204%20attendance%20summary.png",
-        "alt": "Week 4 attendance summary",
-        "group": "Week 4",
-        "caption": "Attendance summary screen."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%204%20device%20recognition.png",
-        "alt": "Week 4 device recognition",
-        "group": "Week 4",
-        "caption": "Device recognition feature."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%204%20invoice%20enhancement.png",
-        "alt": "Week 4 invoice enhancement",
-        "group": "Week 4",
-        "caption": "Invoice enhancement."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%205%20deployment%20in%20vercel.png",
-        "alt": "Week 5 deployment in Vercel",
-        "group": "Week 5",
-        "caption": "Deployment preparation using Vercel."
-      },
-      {
-        "src": "/images/real%20project%20admin%20panel%20of%20attendance%20monitoring%20app/week%205%20finalization.png",
-        "alt": "Week 5 finalization",
-        "group": "Week 5",
-        "caption": "Finalization work for the project."
-      }
-    ]
+    "images": [
+      "/images/real project admin panel of attendance monitoring app/project profile.png",
+      "/images/real project admin panel of attendance monitoring app/employee directory.png",
+      "/images/real project admin panel of attendance monitoring app/week 5 deployment in vercel.png"
+    ],
+    "link": "https://h4m-workforce.vercel.app",
+    "github": "https://github.com/johnraymondgallego08-maker/Hack4mapandan_Workforce_Accountability_Attendance_AdminWeb.git",
+    "content": "### Project Overview\nBuilt a full-stack admin panel with **Node.js** and **Tailwind CSS**. Features include:\n- Employee records management\n- Attendance monitoring with device recognition\n- Automated payroll workflows\n- Vercel deployment for high availability."
   },
   {
-    "title": "Research Government Statutory Computations",
-    "brief": "Research and documentation for government statutory payroll computations, covering required contribution and deduction concepts used in payroll processing.",
-    "description": "A research package focused on government statutory computations for payroll, documenting how required employee deductions and employer contributions are identified, organized, and prepared for accurate payroll system implementation.",
-    "fullDetails": [
-      "Reviewed the statutory computation requirements that payroll systems need to support, including government-mandated contribution and deduction workflows.",
-      "Organized the research into reference documents so the computation logic can be understood before being translated into system features.",
-      "Connected the findings to payroll accuracy, compliance preparation, employee record keeping, and clearer payroll reporting."
-    ],
-    "techStack": ["Payroll Research", "Statutory Computation", "Documentation"],
+    "id": "statutory-research",
+    "title": "Government Statutory Computations Research",
+    "description": "Comprehensive research and documentation for payroll statutory computations.",
+    "tags": ["Research", "Payroll", "Compliance"],
     "completionDate": "2026-02-24",
-    "category": "Research",
-    "featured": true,
-    "image": "/images/research%202/profile.png",
-    "gallery": [
-      {
-        "src": "/images/research%202/profile.png",
-        "alt": "Research Government Statutory Computations profile document",
-        "group": "Overview",
-        "caption": "Project profile document introducing the Government Statutory Computations research."
-      },
-      {
-        "src": "/images/research%202/research%20%20(2).png",
-        "alt": "Government statutory computations research document 2",
-        "group": "Research Docs",
-        "caption": "Research document covering statutory payroll computation requirements."
-      },
-      {
-        "src": "/images/research%202/research%20%20(3).png",
-        "alt": "Government statutory computations research document 3",
-        "group": "Research Docs",
-        "caption": "Research document covering government-mandated payroll contribution concepts."
-      },
-      {
-        "src": "/images/research%202/research%20%20(4).png",
-        "alt": "Government statutory computations research document 4",
-        "group": "Research Docs",
-        "caption": "Research document organizing statutory payroll deduction details."
-      },
-      {
-        "src": "/images/research%202/research%20%20(5).png",
-        "alt": "Government statutory computations research document 5",
-        "group": "Research Docs",
-        "caption": "Research document outlining payroll computation references."
-      },
-      {
-        "src": "/images/research%202/research%20%20(6).png",
-        "alt": "Government statutory computations research document 6",
-        "group": "Research Docs",
-        "caption": "Research document supporting payroll compliance preparation."
-      },
-      {
-        "src": "/images/research%202/research%20%20(7).png",
-        "alt": "Government statutory computations research document 7",
-        "group": "Research Docs",
-        "caption": "Research document for statutory computation planning."
-      },
-      {
-        "src": "/images/research%202/research%20%20(8).png",
-        "alt": "Government statutory computations research document 8",
-        "group": "Research Docs",
-        "caption": "Research document connecting statutory computations with payroll workflows."
-      },
-      {
-        "src": "/images/research%202/research%20%20(9).png",
-        "alt": "Government statutory computations research document 9",
-        "group": "Research Docs",
-        "caption": "Research document summarizing payroll computation references."
-      },
-      {
-        "src": "/images/research%202/research%20%20(10).png",
-        "alt": "Government statutory computations research document 10",
-        "group": "Research Docs",
-        "caption": "Research document showing statutory payroll computation notes."
-      },
-      {
-        "src": "/images/research%202/research%20%20(11).png",
-        "alt": "Government statutory computations research document 11",
-        "group": "Research Docs",
-        "caption": "Final research document for the Government Statutory Computations package."
-      }
-    ]
+    "images": [
+      "/images/research 2/profile.png",
+      "/images/research 2/research  (2).png"
+    ],
+    "link": "#",
+    "github": "#",
+    "content": "Detailed analysis of government-mandated deductions and employer contributions for accurate payroll processing."
   },
   {
+    "id": "workforce-accountability",
     "title": "Workforce Accountability Research",
-    "brief": "Research and planning phase for the attendance and payroll system, covering the problem, target user, empathy map, SCAMPER ideas, and proposed solution.",
-    "description": "A research package for the Workforce Accountability and Attendance System that defines the LGU attendance problem, studies the HR officer user, maps pains and goals, and turns the findings into solution ideas for secure attendance verification, monitoring, and payroll support.",
-    "fullDetails": [
-      "Defined the core problem: manual or outdated attendance workflows can create inaccurate records, proxy logging, payroll errors, delayed reporting, and scattered employee files.",
-      "Created a user persona for an HR officer responsible for monitoring attendance, preparing payroll reports, reducing computation errors, and keeping records audit-ready.",
-      "Built an empathy map to capture what the user hears, sees, thinks, feels, says, and does during daily attendance and payroll work.",
-      "Used SCAMPER and brainstorming to shape solution directions such as QR code and photo capture, GPS validation, real-time attendance monitoring, centralized records, role-based access, and payroll integration."
-    ],
-    "techStack": ["UX Research", "User Persona", "Empathy Map", "SCAMPER"],
+    "description": "UX research and planning phase for secure attendance verification systems.",
+    "tags": ["UX Research", "Persona", "SCAMPER"],
     "completionDate": "2026-04-10",
-    "category": "Research",
-    "featured": true,
-    "image": "/images/research%201/proofile.png",
-    "gallery": [
-      {
-        "src": "/images/research%201/proofile.png",
-        "alt": "Workforce Accountability and Attendance System research profile",
-        "group": "Overview",
-        "caption": "Project profile slide introducing the Workforce Accountability and Attendance System research direction."
-      },
-      {
-        "src": "/images/research%201/problem.png",
-        "alt": "Workforce Accountability and Attendance System problem statement",
-        "group": "Problem",
-        "caption": "Problem statement covering attendance manipulation, manual errors, lack of real-time monitoring, and scattered records."
-      },
-      {
-        "src": "/images/research%201/user%20persona.png",
-        "alt": "HR officer user persona for Workforce Accountability research",
-        "group": "User Research",
-        "caption": "User persona for an HR officer who needs accurate records, faster payroll processing, and transparent attendance monitoring."
-      },
-      {
-        "src": "/images/research%201/empathy%20map.png",
-        "alt": "Empathy map for Workforce Accountability research",
-        "group": "User Research",
-        "caption": "Empathy map showing the user's pressures, frustrations, goals, and daily attendance-record challenges."
-      },
-      {
-        "src": "/images/research%201/scamper.png",
-        "alt": "SCAMPER planning for Workforce Accountability research",
-        "group": "Ideation",
-        "caption": "SCAMPER activity used to explore practical improvements for attendance verification and workforce accountability."
-      },
-      {
-        "src": "/images/research%201/Screenshot%202026-05-06%20152756.png",
-        "alt": "Brainstorming of solution slide for Workforce Accountability research",
-        "group": "Solution",
-        "caption": "Solution brainstorming around secure attendance verification, smart monitoring, access control, and data protection."
-      }
-    ]
+    "images": [
+      "/images/research 1/proofile.png",
+      "/images/research 1/problem.png",
+      "/images/research 1/empathy map.png"
+    ],
+    "link": "#",
+    "github": "#",
+    "content": "Defined core problem statements and user personas for HR officers handling attendance monitoring."
   },
   {
+    "id": "practice-web",
     "title": "Practice Web",
-    "brief": "Two-week Node.js learning project for practicing login, dashboard, employee logs, payroll, profile, and user management screens.",
-    "description": "A two-week learning project using Node.js, EJS, and Tailwind CSS to practice backend and frontend workflows for login, dashboard, employee logs, payroll, profile, and user management screens.",
-    "fullDetails": [
-      "Week 1 focused on setting up the Node.js project structure and practicing EJS rendering through login, dashboard, and employee logs screens.",
-      "Week 2 focused on payroll, profile, and user management screens while improving Tailwind CSS layout and admin interface consistency.",
-      "The practice project helped prepare the frontend and backend workflow used later in H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL."
-    ],
-    "techStack": ["Node.js", "EJS", "Tailwind CSS"],
+    "description": "Two-week practice project for core backend and UI concepts.",
+    "tags": ["Node.js", "EJS", "Tailwind CSS"],
+    "startDate": "2026-03-13",
     "completionDate": "2026-03-20",
-    "category": "Practice Project",
-    "featured": true,
-    "image": "/images/practiced%20node.js%20(web)/dashboard.png",
-    "gallery": [
-      {
-        "src": "/images/practiced%20node.js%20(web)/login.png",
-        "alt": "Practice Web login screen",
-        "group": "Week 1",
-        "caption": "Week 1 focused on the login page and first Node.js web app structure."
-      },
-      {
-        "src": "/images/practiced%20node.js%20(web)/dashboard.png",
-        "alt": "Practice Web dashboard screen",
-        "group": "Week 1",
-        "caption": "Week 1 also focused on the dashboard screen and admin layout practice."
-      },
-      {
-        "src": "/images/practiced%20node.js%20(web)/employee%20logs.png",
-        "alt": "Practice Web employee logs screen",
-        "group": "Week 1",
-        "caption": "Week 1 included employee logs and workforce activity records."
-      },
-      {
-        "src": "/images/practiced%20node.js%20(web)/payroll.png",
-        "alt": "Practice Web payroll screen",
-        "group": "Week 2",
-        "caption": "Week 2 focused on payroll screen practice."
-      },
-      {
-        "src": "/images/practiced%20node.js%20(web)/profile.png",
-        "alt": "Practice Web profile screen",
-        "group": "Week 2",
-        "caption": "Week 2 focused on profile screen practice and final UI polish."
-      },
-      {
-        "src": "/images/practiced%20node.js%20(web)/user%20management.png",
-        "alt": "Practice Web user management screen",
-        "group": "Week 2",
-        "caption": "Week 2 also covered user management practice."
-      }
-    ]
+    "images": [
+      "/images/practiced node.js (web)/dashboard.png",
+      "/images/practiced node.js (web)/login.png"
+    ],
+    "link": "#",
+    "github": "#",
+    "content": "Practice implementation of authentication, dashboards, and profile management."
   }
 ]

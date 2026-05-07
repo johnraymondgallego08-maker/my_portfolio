@@ -9,7 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "A gallery of frontend and backend projects using Node.js, EJS, Tailwind CSS, and Vercel."
+    "Search and filter frontend, backend, research, attendance, and payroll projects by category or tech stack."
 };
 
 export default function WorkPage() {
@@ -31,7 +31,7 @@ export default function WorkPage() {
               Frontend, backend, attendance, and payroll systems.
             </h1>
             <p className="text-base leading-7 text-orange-200 sm:text-lg sm:leading-8">
-              Browse my practice project and real project work. Click a card image to open the modal gallery and view the screens by week.
+              Search by title or description, then filter by category and tech stack.
             </p>
           </div>
         </div>

@@ -55,30 +55,20 @@ export default function HomePage() {
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
-              <div className="animated-border rounded-md border border-white/10 bg-gradient-to-br from-white/[0.12] to-white/[0.04] p-4 shadow-soft backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/[0.14]">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-300">
-                  Role
-                </p>
-                <p className="mt-2 text-sm font-semibold leading-6 text-orange-100">
-                  4th Year Intern
-                </p>
-              </div>
-              <div className="animated-border rounded-md border border-white/10 bg-gradient-to-br from-white/[0.12] to-white/[0.04] p-4 shadow-soft backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/[0.14]">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-300">
-                  Focus
-                </p>
-                <p className="mt-2 text-sm font-semibold leading-6 text-orange-100">
-                  Systems and UX flow
-                </p>
-              </div>
-              <div className="animated-border rounded-md border border-white/10 bg-gradient-to-br from-white/[0.12] to-white/[0.04] p-4 shadow-soft backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/[0.14]">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-300">
-                  Stack
-                </p>
-                <p className="mt-2 text-sm font-semibold leading-6 text-orange-100">
-                  Node.js, EJS, Tailwind, Vercel
-                </p>
-              </div>
+              {[
+                ["Role", "4th Year Intern"],
+                ["Focus", "Systems and UX flow"],
+                ["Stack", "Node.js, EJS, Tailwind, Vercel"]
+              ].map(([label, value]) => (
+                <div className="animated-border rounded-md border border-white/10 bg-gradient-to-br from-white/[0.12] to-white/[0.04] p-4 shadow-soft backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/[0.14]" key={label}>
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-300">
+                    {label}
+                  </p>
+                  <p className="mt-2 text-sm font-semibold leading-6 text-orange-100">
+                    {value}
+                  </p>
+                </div>
+              ))}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link className="group inline-flex min-h-11 items-center justify-center overflow-hidden rounded-full bg-moss px-5 py-2 text-sm font-semibold text-ink shadow-[0_16px_40px_rgba(255,208,47,0.22)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ffdc5e] hover:shadow-[0_20px_52px_rgba(255,208,47,0.35)]" href="/work">

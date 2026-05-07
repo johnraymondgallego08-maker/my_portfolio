@@ -1,6 +1,6 @@
 ---
 title: H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL Week 05: Deployment and Finalization
-date: 2026-04-24
+date: 2026-04-10
 summary: Finalized H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL and prepared deployment using Vercel.
 tags: H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL, Vercel, Deployment
 ---

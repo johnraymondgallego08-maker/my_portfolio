@@ -20,14 +20,30 @@ export function WorkGallery({
 }) {
   const [category, setCategory] = useState(ALL_FILTER_VALUE);
   const [tech, setTech] = useState(ALL_FILTER_VALUE);
+  const [search, setSearch] = useState("");
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const closeGallery = useCallback(() => setActiveProject(null), []);
 
-  const filteredProjects = useMemo(
-    () => filterProjects(projects, { category, tech }),
-    [category, projects, tech]
-  );
+  const filteredProjects = useMemo(() => {
+    const query = search.trim().toLowerCase();
+
+    return filterProjects(projects, { category, tech }).filter((project) => {
+      if (!query) {
+        return true;
+      }
+
+      return [
+        project.title,
+        project.description,
+        project.category,
+        ...project.techStack
+      ]
+        .join(" ")
+        .toLowerCase()
+        .includes(query);
+    });
+  }, [category, projects, search, tech]);
 
   const activeGallery = useMemo(
     () => (activeProject ? getProjectGallery(activeProject) : []),
@@ -47,6 +63,16 @@ export function WorkGallery({
         <h2 className="text-2xl font-bold tracking-normal text-ink" id="work-gallery-title">
           Activity Gallery
         </h2>
+        <label className="block max-w-xl space-y-2">
+          <span className="text-sm font-semibold text-navy">Search projects</span>
+          <input
+            className="min-h-11 w-full rounded-md border border-clay/15 bg-white px-4 text-sm text-ink shadow-soft transition duration-300 placeholder:text-steel focus:border-clay focus:outline-none focus:ring-2 focus:ring-clay/20"
+            onChange={(event) => setSearch(event.target.value)}
+            placeholder="Search by title, description, category, or tech stack"
+            type="search"
+            value={search}
+          />
+        </label>
         <FilterGroup
           label="Category"
           options={categories}
@@ -75,7 +101,6 @@ export function WorkGallery({
             <ProjectCard
               galleryCount={getProjectGallery(project).length}
               onOpenGallery={() => openGallery(project)}
-              onViewFull={() => openGallery(project)}
               project={project}
             />
           </div>

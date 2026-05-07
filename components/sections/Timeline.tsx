@@ -3,7 +3,7 @@
 import { useCallback, useMemo, useState } from "react";
 import { Badge } from "@/components/atoms/Badge";
 import { ProjectGalleryModal } from "@/components/molecules/ProjectGalleryModal";
-import { formatDate } from "@/lib/format";
+import { formatDateRange } from "@/lib/format";
 import { getProjectGallery } from "@/lib/project-images";
 import { useModalLifecycle } from "@/lib/useModalLifecycle";
 import type { Project } from "@/lib/types";
@@ -48,8 +48,8 @@ export function Timeline({ projects }: { projects: Project[] }) {
                 type="button"
               >
                 <span className="absolute left-[0.78rem] top-6 h-3 w-3 rounded-full border-2 border-white bg-moss shadow-[0_0_0_5px_rgba(47,109,246,0.14)] transition duration-300 group-hover:scale-125 sm:left-[10.52rem]" />
-                <time className="text-sm font-semibold text-clay" dateTime={project.completionDate}>
-                  {formatDate(project.completionDate)}
+                <time className="text-sm font-semibold text-clay" dateTime={project.startDate ?? project.completionDate}>
+                  {formatDateRange(project.startDate, project.completionDate)}
                 </time>
                 <div>
                   <h3 className="break-words font-bold text-ink transition duration-300 group-hover:text-navy">

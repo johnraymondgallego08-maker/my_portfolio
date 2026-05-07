@@ -36,7 +36,6 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
             <ProjectCard
               galleryCount={getProjectGallery(project).length}
               onOpenGallery={() => openGallery(project)}
-              onViewFull={() => openGallery(project)}
               project={project}
             />
           </div>

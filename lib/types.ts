@@ -1,15 +1,19 @@
 export interface Project {
+  id: string;
   title: string;
   brief?: string;
   description: string;
   fullDetails?: string[];
   techStack: string[];
+  startDate?: string;
   completionDate: string;
   category: string;
   featured?: boolean;
   repositoryUrl?: string;
+  liveUrl?: string;
   image?: string;
   gallery?: ProjectGalleryImage[];
+  markdown?: string;
 }
 
 export interface ProjectGalleryImage {

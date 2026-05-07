@@ -1,6 +1,6 @@
 ---
 title: H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL Week 03: Admin Workflows
-date: 2026-04-10
+date: 2026-03-27
 summary: Improved H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL dashboard, attendance, manage user, payroll, invoice popup, and profile workflows.
 tags: H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL, Admin Panel, Frontend
 ---
