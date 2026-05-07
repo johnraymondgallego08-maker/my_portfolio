@@ -4,8 +4,8 @@
     "title": "H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL",
     "description": "Full-stack admin system for employee records, attendance monitoring, payroll workflows, and reports.",
     "tags": ["Node.js", "EJS", "Tailwind CSS", "Vercel"],
-    "startDate": "2026-03-13",
-    "completionDate": "2026-04-24",
+    "startDate": "2026-03",
+    "completionDate": "2026-04",
     "images": [
       "/images/real project admin panel of attendance monitoring app/project profile.png",
       "/images/real project admin panel of attendance monitoring app/employee directory.png",
@@ -20,7 +20,7 @@
     "title": "Government Statutory Computations Research",
     "description": "Comprehensive research and documentation for payroll statutory computations.",
     "tags": ["Research", "Payroll", "Compliance"],
-    "completionDate": "2026-02-24",
+    "completionDate": "2026-02",
     "images": [
       "/images/research 2/profile.png",
       "/images/research 2/research  (2).png"
@@ -49,8 +49,8 @@
     "title": "Practice Web",
     "description": "Two-week practice project for core backend and UI concepts.",
     "tags": ["Node.js", "EJS", "Tailwind CSS"],
-    "startDate": "2026-03-13",
-    "completionDate": "2026-03-20",
+    "startDate": "2026-03",
+    "completionDate": "2026-03",
     "images": [
       "/images/practiced node.js (web)/dashboard.png",
       "/images/practiced node.js (web)/login.png"

@@ -14,8 +14,8 @@ export function getProjects(): Project[] {
 
   return projectsData.map(normalizeProject).sort(
     (first, second) =>
-      new Date(second.completionDate).getTime() -
-      new Date(first.completionDate).getTime()
+      parseProjectDate(second.completionDate).getTime() -
+      parseProjectDate(first.completionDate).getTime()
   );
 }
 
@@ -145,4 +145,9 @@ function uniqueOptions(values: string[]): FilterOption[] {
   return Array.from(new Set(values))
     .sort((first, second) => first.localeCompare(second))
     .map((value) => ({ label: value, value }));
+}
+
+function parseProjectDate(value: string): Date {
+  const normalized = /^\d{4}-\d{2}$/.test(value) ? `${value}-01` : value;
+  return new Date(`${normalized}T00:00:00`);
 }

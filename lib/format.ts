@@ -1,9 +1,12 @@
+function normalizeDate(date: string): string {
+  return /^\d{4}-\d{2}$/.test(date) ? `${date}-01` : date;
+}
+
 export function formatDate(date: string): string {
   return new Intl.DateTimeFormat("en", {
     month: "short",
-    day: "numeric",
     year: "numeric"
-  }).format(new Date(`${date}T00:00:00`));
+  }).format(new Date(`${normalizeDate(date)}T00:00:00`));
 }
 
 export function formatDateRange(startDate: string | undefined, endDate: string): string {
