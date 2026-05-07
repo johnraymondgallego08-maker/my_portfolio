@@ -46,7 +46,7 @@ function LogModal({
 }) {
   return (
     <ModalShell labelledBy="log-modal-title" onClose={onClose}>
-        <header className="relative flex items-start justify-between gap-4 overflow-hidden border-b border-clay/15 bg-night px-4 py-4 text-orange-200 sm:px-6">
+        <header className="relative flex shrink-0 items-start justify-between gap-3 overflow-hidden border-b border-clay/15 bg-night px-3 py-4 text-orange-200 sm:gap-4 sm:px-6">
           <div className="absolute inset-0 animate-drift-grid bg-[linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:36px_36px]" />
           <div className="relative min-w-0 space-y-2">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-300">
@@ -72,10 +72,10 @@ function LogModal({
         </header>
 
         <div className="grid min-h-0 flex-1 gap-4 overflow-y-auto p-3 sm:gap-5 sm:p-6 lg:grid-cols-[minmax(0,1fr)_16rem]">
-          <div className="rounded-lg border border-clay/10 bg-white/90 p-4 shadow-soft transition duration-300 hover:shadow-glow sm:p-5">
+          <div className="min-w-0 rounded-lg border border-clay/10 bg-white/90 p-4 shadow-soft transition duration-300 hover:shadow-glow sm:p-5">
             <MarkdownContent source={log.body} />
           </div>
-          <aside className="animated-border space-y-4 rounded-lg border border-clay/15 bg-gradient-to-br from-skywash/55 to-white/80 p-4 text-sm shadow-soft lg:self-start">
+          <aside className="animated-border min-w-0 space-y-4 rounded-lg border border-clay/15 bg-gradient-to-br from-skywash/55 to-white/80 p-4 text-sm shadow-soft lg:self-start">
             <div>
               <h3 className="font-bold text-ink">Summary</h3>
               <p className="mt-2 leading-6 text-slate-600">{log.summary}</p>

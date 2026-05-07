@@ -12,15 +12,15 @@ export function LogCard({
 }) {
   const titleContent = onOpen ? (
     <button
-      className="inline-flex min-h-11 items-center rounded-sm text-left transition duration-300 hover:translate-x-1 hover:text-clay"
+      className="inline-flex min-h-11 min-w-0 items-center rounded-sm text-left transition duration-300 hover:translate-x-1 hover:text-clay"
       onClick={() => onOpen(log)}
       type="button"
     >
-      {log.title}
+      <span className="min-w-0 break-words">{log.title}</span>
     </button>
   ) : (
-    <Link className="inline-flex min-h-11 items-center rounded-sm transition duration-300 hover:translate-x-1 hover:text-clay" href={`/logs/${log.slug}`}>
-      {log.title}
+    <Link className="inline-flex min-h-11 min-w-0 items-center rounded-sm transition duration-300 hover:translate-x-1 hover:text-clay" href={`/logs/${log.slug}`}>
+      <span className="min-w-0 break-words">{log.title}</span>
     </Link>
   );
 

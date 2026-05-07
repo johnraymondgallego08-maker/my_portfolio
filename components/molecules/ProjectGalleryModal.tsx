@@ -34,7 +34,7 @@ export function ProjectGalleryModal({
 
   return (
     <ModalShell labelledBy="gallery-title" maxWidth="max-w-7xl" onClose={onClose}>
-      <header className="flex items-start justify-between gap-4 border-b border-clay/15 bg-night px-4 py-3 text-orange-200 sm:px-5">
+      <header className="flex shrink-0 items-start justify-between gap-3 border-b border-clay/15 bg-night px-3 py-3 text-orange-200 sm:gap-4 sm:px-5">
         <div className="min-w-0">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-300">
             Full project
@@ -53,9 +53,9 @@ export function ProjectGalleryModal({
         </button>
       </header>
 
-      <div className="grid min-h-0 flex-1 gap-4 overflow-y-auto p-3 sm:gap-5 sm:p-5 lg:grid-cols-[minmax(0,1.25fr)_minmax(20rem,0.75fr)] lg:overflow-hidden">
+      <div className="grid min-h-0 flex-1 gap-4 overflow-y-auto p-3 sm:gap-5 sm:p-5 lg:grid-cols-[minmax(0,1.25fr)_minmax(18rem,0.75fr)] lg:overflow-hidden">
         <div className="flex min-h-0 flex-col gap-3">
-          <div className="relative aspect-[4/3] max-h-[44vh] shrink-0 overflow-hidden rounded-lg border border-clay/10 bg-white shadow-soft sm:aspect-[16/10] sm:max-h-[48vh]">
+          <div className="relative aspect-[4/3] max-h-[36dvh] shrink-0 overflow-hidden rounded-lg border border-clay/10 bg-white shadow-soft sm:aspect-[16/10] sm:max-h-[48dvh]">
             <Image
               alt={currentImage.alt}
               className="object-contain transition duration-500"
@@ -66,9 +66,9 @@ export function ProjectGalleryModal({
             />
           </div>
           {hasMultipleImages ? (
-            <div className="flex items-center justify-between gap-2 sm:gap-3">
+            <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-2 sm:gap-3">
               <button
-                className="inline-flex min-h-11 items-center justify-center rounded-md border border-clay/15 px-4 text-sm font-semibold text-navy transition duration-300 hover:-translate-x-1 hover:border-clay hover:bg-skywash/45 hover:text-clay"
+                className="inline-flex min-h-11 min-w-0 items-center justify-center rounded-md border border-clay/15 px-3 text-sm font-semibold text-navy transition duration-300 hover:-translate-x-1 hover:border-clay hover:bg-skywash/45 hover:text-clay sm:px-4"
                 onClick={showPrevious}
                 type="button"
               >
@@ -78,7 +78,7 @@ export function ProjectGalleryModal({
                 {activeImageIndex + 1} / {images.length}
               </p>
               <button
-                className="inline-flex min-h-11 items-center justify-center rounded-md border border-clay/15 px-4 text-sm font-semibold text-navy transition duration-300 hover:translate-x-1 hover:border-clay hover:bg-skywash/45 hover:text-clay"
+                className="inline-flex min-h-11 min-w-0 items-center justify-center rounded-md border border-clay/15 px-3 text-sm font-semibold text-navy transition duration-300 hover:translate-x-1 hover:border-clay hover:bg-skywash/45 hover:text-clay sm:px-4"
                 onClick={showNext}
                 type="button"
               >
@@ -98,7 +98,7 @@ export function ProjectGalleryModal({
             ) : null}
           </div>
 
-          <div className="min-h-0 flex-1 overflow-y-auto rounded-lg border border-clay/10 bg-white/65 p-3 pr-2">
+          <div className="min-h-[9rem] flex-1 overflow-y-auto rounded-lg border border-clay/10 bg-white/65 p-3 pr-2 lg:min-h-0">
             {thumbnailGroups.map((group) => (
               <div className="space-y-2 pb-4 last:pb-0" key={group.label}>
                 {group.label ? (
@@ -106,7 +106,7 @@ export function ProjectGalleryModal({
                     {group.label}
                   </p>
                 ) : null}
-                <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 lg:grid-cols-6">
+                <div className="grid grid-cols-2 gap-2 min-[420px]:grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
                   {group.images.map(({ image, index }) => (
                     <button
                       aria-label={`Show image ${index + 1}`}
@@ -135,7 +135,7 @@ export function ProjectGalleryModal({
           </div>
         </div>
 
-          <aside className="min-w-0 space-y-4 rounded-lg border border-clay/15 bg-gradient-to-br from-white/95 to-skywash/45 p-4 shadow-soft lg:max-h-[calc(96vh-6.5rem)]">
+          <aside className="min-w-0 space-y-4 overflow-y-auto rounded-lg border border-clay/15 bg-gradient-to-br from-white/95 to-skywash/45 p-4 shadow-soft lg:max-h-[calc(96dvh-6.5rem)]">
           <div className="space-y-3">
             <p className="text-sm leading-6 text-slate-700">{project.description}</p>
             <ul className="space-y-2">

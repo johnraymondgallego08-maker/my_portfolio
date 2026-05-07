@@ -17,9 +17,9 @@ export function Badge({
 }) {
   return (
     <span
-      className={`inline-flex min-h-8 items-center rounded-full border px-3 py-1 text-sm font-medium shadow-[0_8px_24px_rgba(47,109,246,0.08)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(47,109,246,0.16)] ${variants[variant]}`}
+      className={`inline-flex min-h-8 max-w-full items-center rounded-full border px-3 py-1 text-sm font-medium shadow-[0_8px_24px_rgba(47,109,246,0.08)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(47,109,246,0.16)] ${variants[variant]}`}
     >
-      {children}
+      <span className="min-w-0 break-words">{children}</span>
     </span>
   );
 }

@@ -22,7 +22,7 @@ export function MarkdownContent({ source }: { source: string }) {
   const blocks = parseMarkdownBlocks(source);
 
   return (
-    <div className="space-y-6 text-base leading-8 text-slate-700">
+    <div className="min-w-0 space-y-6 break-words text-base leading-8 text-slate-700">
       {blocks.map((block, index) => renderBlock(block, index))}
     </div>
   );
@@ -34,7 +34,7 @@ function renderBlock(block: MarkdownBlock, index: number): ReactNode {
 
     return (
       <Heading
-        className="border-l-4 border-moss pl-4 text-2xl font-semibold tracking-normal text-navy transition duration-300 hover:translate-x-1 hover:text-clay"
+        className="break-words border-l-4 border-moss pl-4 text-xl font-semibold tracking-normal text-navy transition duration-300 hover:translate-x-1 hover:text-clay sm:text-2xl"
         key={`${block.text}-${index}`}
       >
         {block.text}
@@ -44,7 +44,7 @@ function renderBlock(block: MarkdownBlock, index: number): ReactNode {
 
   if (block.type === "list") {
     return (
-      <ul className="list-disc space-y-3 pl-6" key={`list-${index}`}>
+      <ul className="list-disc space-y-3 pl-5 sm:pl-6" key={`list-${index}`}>
         {block.items.map((item) => (
           <li className="transition duration-300 hover:translate-x-1 hover:text-navy" key={item}>
             {item}

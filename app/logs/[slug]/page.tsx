@@ -57,7 +57,7 @@ export default async function LogPage({ params }: LogPageProps) {
           </span>
           Back to logs
         </Link>
-        <header className="animated-border panel-gradient relative overflow-hidden space-y-5 rounded-md border border-clay/15 p-6 shadow-soft transition duration-300 hover:shadow-glow">
+        <header className="animated-border panel-gradient relative space-y-5 overflow-hidden rounded-md border border-clay/15 p-4 shadow-soft transition duration-300 hover:shadow-glow sm:p-6">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px animate-line-sweep bg-gradient-to-r from-transparent via-moss to-transparent" />
           <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-steel">
             <time dateTime={log.date}>{formatDate(log.date)}</time>
@@ -76,7 +76,7 @@ export default async function LogPage({ params }: LogPageProps) {
             ))}
           </div>
         </header>
-        <div className="panel-gradient mt-8 rounded-md border border-clay/10 p-6 shadow-soft transition duration-300 hover:shadow-glow motion-safe:animate-scale-in">
+        <div className="panel-gradient mt-8 rounded-md border border-clay/10 p-4 shadow-soft transition duration-300 hover:shadow-glow motion-safe:animate-scale-in sm:p-6">
           <MarkdownContent source={log.body} />
         </div>
       </article>

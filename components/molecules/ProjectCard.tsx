@@ -33,13 +33,13 @@ export function ProjectCard({
       {onOpenGallery ? (
         <button
           aria-label={`Open ${project.title} gallery`}
-          className="group relative aspect-[16/10] w-full overflow-hidden bg-white text-left"
+          className="group relative aspect-[16/10] w-full min-w-0 overflow-hidden bg-white text-left"
           onClick={onOpenGallery}
           type="button"
         >
           {imageContent}
           <span className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-night/70 to-transparent opacity-80 transition duration-300 group-hover:opacity-100" />
-          <span className="absolute bottom-3 left-3 rounded-md border border-white/10 bg-night/80 px-3 py-1.5 text-xs font-bold text-white shadow-soft backdrop-blur transition duration-300 group-hover:translate-x-1">
+          <span className="absolute inset-x-3 bottom-3 rounded-md border border-white/10 bg-night/80 px-3 py-1.5 text-xs font-bold text-white shadow-soft backdrop-blur transition duration-300 group-hover:translate-x-1 sm:inset-x-auto">
             {resolvedGalleryCount === 1
               ? "View image"
               : `View ${resolvedGalleryCount} images`}
@@ -48,7 +48,7 @@ export function ProjectCard({
       ) : (
         <div className="relative aspect-[16/10] bg-white">{imageContent}</div>
       )}
-      <div className="flex flex-1 flex-col gap-5 border-t border-clay/10 p-5">
+      <div className="flex min-w-0 flex-1 flex-col gap-5 border-t border-clay/10 p-4 sm:p-5">
         <div className="space-y-3">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="success">{project.category}</Badge>
@@ -68,7 +68,7 @@ export function ProjectCard({
           <div className="flex flex-wrap gap-2">
             {onViewFull ? (
               <button
-                className="inline-flex min-h-11 items-center justify-center rounded-md bg-navy px-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-clay"
+                className="inline-flex min-h-11 min-w-0 items-center justify-center rounded-md bg-navy px-4 text-center text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-clay"
                 onClick={onViewFull}
                 type="button"
               >
