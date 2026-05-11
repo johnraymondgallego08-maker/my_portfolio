@@ -16,7 +16,13 @@ type ParagraphBlock = {
   text: string;
 };
 
-type MarkdownBlock = HeadingBlock | ParagraphBlock | ListBlock;
+type ImageBlock = {
+  type: "image";
+  alt: string;
+  src: string;
+};
+
+type MarkdownBlock = HeadingBlock | ParagraphBlock | ListBlock | ImageBlock;
 
 export function MarkdownContent({ source }: { source: string }) {
   const blocks = parseMarkdownBlocks(source);
@@ -51,6 +57,24 @@ function renderBlock(block: MarkdownBlock, index: number): ReactNode {
           </li>
         ))}
       </ul>
+    );
+  }
+
+  if (block.type === "image") {
+    return (
+      <figure className="overflow-hidden rounded-md border border-clay/15 bg-white/70 p-3 shadow-soft" key={`${block.src}-${index}`}>
+        <img
+          alt={block.alt}
+          className="w-full rounded-sm border border-clay/10 object-cover"
+          loading="lazy"
+          src={block.src}
+        />
+        {block.alt ? (
+          <figcaption className="mt-3 text-sm leading-6 text-slate-500">
+            {block.alt}
+          </figcaption>
+        ) : null}
+      </figure>
     );
   }
 
@@ -107,6 +131,19 @@ function parseMarkdownBlocks(source: string): MarkdownBlock[] {
     if (trimmed.startsWith("- ")) {
       flushParagraph();
       listItems.push(trimmed.slice(2));
+      continue;
+    }
+
+    const imageMatch = trimmed.match(/^!\[(.*)\]\((.+)\)$/);
+
+    if (imageMatch) {
+      flushParagraph();
+      flushList();
+      blocks.push({
+        type: "image",
+        alt: imageMatch[1].trim(),
+        src: imageMatch[2].trim()
+      });
       continue;
     }
 

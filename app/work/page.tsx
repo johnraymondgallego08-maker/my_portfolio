@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Search and filter frontend, backend, research, attendance, and payroll projects by category or tech stack."
+    "Search and filter frontend, backend, attendance, and payroll projects by category or tech stack."
 };
 
 export default function WorkPage() {
@@ -30,7 +30,7 @@ export default function WorkPage() {
               Project Work
             </p>
             <h1 className="text-3xl font-black tracking-normal text-orange-300 sm:text-5xl">
-              Frontend, backend, attendance, and payroll systems.
+              Frontend, backend, attendance, and payroll builds.
             </h1>
             <p className="text-base leading-7 text-orange-200 sm:text-lg sm:leading-8">
               Search by title or description, then filter by category and tech stack.

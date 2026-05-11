@@ -16,35 +16,6 @@
     "content": "### Project Overview\nBuilt a full-stack admin panel with **Node.js** and **Tailwind CSS**. Features include:\n- Employee records management\n- Attendance monitoring with device recognition\n- Automated payroll workflows\n- Vercel deployment for high availability."
   },
   {
-    "id": "statutory-research",
-    "title": "Government Statutory Computations Research",
-    "description": "Comprehensive research and documentation for payroll statutory computations.",
-    "tags": ["Research", "Payroll", "Compliance"],
-    "completionDate": "2026-02",
-    "images": [
-      "/images/research 2/profile.png",
-      "/images/research 2/research  (2).png"
-    ],
-    "link": "#",
-    "github": "#",
-    "content": "Detailed analysis of government-mandated deductions and employer contributions for accurate payroll processing."
-  },
-  {
-    "id": "workforce-accountability",
-    "title": "Workforce Accountability Research",
-    "description": "UX research and planning phase for secure attendance verification systems.",
-    "tags": ["UX Research", "Persona", "SCAMPER"],
-    "completionDate": "2026-04-10",
-    "images": [
-      "/images/research 1/proofile.png",
-      "/images/research 1/problem.png",
-      "/images/research 1/empathy map.png"
-    ],
-    "link": "#",
-    "github": "#",
-    "content": "Defined core problem statements and user personas for HR officers handling attendance monitoring."
-  },
-  {
     "id": "practice-web",
     "title": "Practice Web",
     "description": "Two-week practice project for core backend and UI concepts.",

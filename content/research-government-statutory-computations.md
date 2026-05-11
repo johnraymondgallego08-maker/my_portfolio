@@ -17,6 +17,12 @@ This activity focused on researching government statutory computations used in p
 - Connected the research to payroll compliance preparation and cleaner computation workflows.
 - Prepared the documentation as a reference for future payroll feature implementation.
 
+## Research Photos
+
+![Research cover for statutory payroll computations](/images/research%202/profile.png)
+
+![Statutory computation reference table used for payroll planning](/images/research%202/research%20%20%282%29.png)
+
 ## Outcome
 
 The research created a clearer foundation for building payroll features that can handle statutory deductions, contribution references, payroll accuracy, and compliance-ready reporting.
