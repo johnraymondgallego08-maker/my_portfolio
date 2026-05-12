@@ -25,14 +25,14 @@ export default function WorkPage() {
         <div className="pointer-events-none absolute left-0 top-0 h-28 w-full animate-scan-line bg-gradient-to-b from-transparent via-moss/20 to-transparent" />
         <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4 motion-safe:animate-fade-up">
-            <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-orange-300">
+            <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-moss">
               <LayersIcon className="h-4 w-4" />
               Project Work
             </p>
-            <h1 className="text-3xl font-black tracking-normal text-orange-300 sm:text-5xl">
+            <h1 className="text-3xl font-black tracking-normal text-white sm:text-5xl">
               Frontend, backend, attendance, and payroll builds.
             </h1>
-            <p className="text-base leading-7 text-orange-200 sm:text-lg sm:leading-8">
+            <p className="text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
               Search by title or description, then filter by category and tech stack.
             </p>
           </div>

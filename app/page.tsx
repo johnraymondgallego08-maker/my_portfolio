@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Space_Grotesk } from "next/font/google";
 import { Badge } from "@/components/atoms/Badge";
 import {
   ArrowRightIcon,
@@ -18,12 +17,6 @@ import {
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { Timeline } from "@/components/sections/Timeline";
 import { getFeaturedProjects, getProjects } from "@/lib/projects";
-
-const heroFont = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  display: "swap"
-});
 
 const highlightCards = [
   { label: "Role", value: "4th Year Intern", Icon: UserBadgeIcon },
@@ -58,15 +51,15 @@ export default function HomePage() {
               Makerspace InnovHub Internship Portfolio
             </span>
             <div className="space-y-5">
-              <p className="text-sm font-bold uppercase tracking-[0.22em] text-orange-300">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-moss">
                 UEP INTERN / 2026
               </p>
-              <h1 className={`${heroFont.className} max-w-3xl text-2xl font-bold leading-tight tracking-[0.035em] text-orange-300 sm:text-4xl lg:text-5xl`}>
+              <h1 className="max-w-3xl text-2xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
                 <span className="block">
                   John Raymond Gallego builds polished, practical systems.
                 </span>
               </h1>
-              <p className="max-w-2xl text-base leading-7 text-orange-200 sm:text-lg sm:leading-8">
+              <p className="max-w-2xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
                 This portfolio brings together my internship work, practice builds, and a full admin platform for attendance, workforce records, and payroll.
               </p>
             </div>
@@ -76,10 +69,10 @@ export default function HomePage() {
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.08] text-orange-100 shadow-[0_10px_22px_rgba(10,18,38,0.22)]">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <p className="mt-3 text-xs font-bold uppercase tracking-[0.16em] text-orange-300">
+                  <p className="mt-3 text-xs font-bold uppercase tracking-[0.16em] text-moss">
                     {label}
                   </p>
-                  <p className="mt-2 text-sm font-semibold leading-6 text-orange-100">
+                  <p className="mt-2 text-sm font-semibold leading-6 text-white">
                     {value}
                   </p>
                 </div>
@@ -91,7 +84,7 @@ export default function HomePage() {
                 View Work
                 <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
-              <Link className="group inline-flex min-h-11 items-center justify-center rounded-full border border-white/15 bg-white/10 px-5 py-2 text-sm font-semibold text-orange-200 transition duration-300 hover:-translate-y-0.5 hover:border-moss/70 hover:bg-white/15" href="/logs">
+              <Link className="group inline-flex min-h-11 items-center justify-center rounded-full border border-white/15 bg-white/10 px-5 py-2 text-sm font-semibold text-slate-100 transition duration-300 hover:-translate-y-0.5 hover:border-moss/70 hover:bg-white/15" href="/logs">
                 <NotebookIcon className="mr-2 h-4 w-4" />
                 Read Build Logs
                 <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -101,7 +94,7 @@ export default function HomePage() {
               <div className="flex w-max animate-ticker gap-3 hover:[animation-play-state:paused]">
                 {[...movingTech, ...movingTech].map(({ label, Icon }, index) => (
                   <span
-                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.08] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-orange-100 shadow-[0_12px_30px_rgba(10,18,38,0.18)]"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.08] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[0_12px_30px_rgba(10,18,38,0.18)]"
                     key={`${label}-${index}`}
                   >
                     <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-moss">
@@ -119,7 +112,7 @@ export default function HomePage() {
               <div className="absolute bottom-16 right-0 h-20 w-20 animate-float-card border border-clay/50 bg-clay/35 backdrop-blur-sm sm:-right-5 sm:h-24 sm:w-24" />
               <div className="interactive-card relative mx-auto aspect-[4/5] w-full max-w-[240px] overflow-hidden rounded-md border border-white/15 bg-skywash shadow-glow transition duration-500 hover:-translate-y-2 hover:rotate-1 hover:shadow-lift sm:max-w-[260px] md:ml-auto md:mr-0">
                 <Image
-                  alt="Portrait of Johnraymond Gallego, owner of this portfolio."
+                  alt="Portrait of John Raymond Gallego, owner of this portfolio."
                   className="object-cover object-top transition duration-700 hover:scale-105"
                   fill
                   priority
@@ -127,7 +120,7 @@ export default function HomePage() {
                   src="/images/image.png"
                 />
               </div>
-              <div className="animated-border mx-auto mt-5 max-w-[260px] rounded-md border border-white/10 bg-gradient-to-br from-white/[0.14] to-white/[0.05] p-4 text-sm leading-6 text-orange-200 shadow-soft backdrop-blur transition duration-300 hover:-translate-y-1 md:ml-auto md:mr-0">
+              <div className="animated-border mx-auto mt-5 max-w-[260px] rounded-md border border-white/10 bg-gradient-to-br from-white/[0.14] to-white/[0.05] p-4 text-sm leading-6 text-slate-100 shadow-soft backdrop-blur transition duration-300 hover:-translate-y-1 md:ml-auto md:mr-0">
                 Internship work focused on polished interfaces, structured workflows, and clear day-to-day usability.
               </div>
             </div>

@@ -12,11 +12,11 @@ export function SiteHeader() {
         className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8"
       >
         <Link
-          className="group inline-flex min-h-11 min-w-0 items-center text-lg font-black tracking-normal text-orange-300 transition duration-300 hover:text-orange-100"
+          className="group inline-flex min-h-11 min-w-0 items-center text-lg font-black tracking-normal text-white transition duration-300 hover:text-slate-100"
           href="/"
         >
           <span className="mr-3 h-3 w-3 rounded-full bg-moss shadow-[0_0_24px_rgba(255,208,47,0.8)] transition duration-300 group-hover:scale-125" />
-          <span className="min-w-0 break-words">Johnraymond Gallego</span>
+          <span className="min-w-0 break-words">John Raymond Gallego</span>
         </Link>
         <div className="flex min-w-0 flex-wrap gap-2">
           <NavLink href="/" label="Home" />

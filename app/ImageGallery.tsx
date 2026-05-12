@@ -8,10 +8,10 @@ export function ImageGallery({ images }: { images: string[] }) {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-bold text-orange-200">Project Screenshots</h3>
+        <h3 className="text-lg font-bold text-white">Project Screenshots</h3>
         <button 
           onClick={() => images.length > 0 && setSelectedImg(images[0])}
-          className="text-sm font-bold text-orange-400 hover:underline"
+          className="text-sm font-bold text-moss hover:underline"
         >
           View images
         </button>

@@ -13,7 +13,7 @@ export function NavLink({ href, label }: { href: string; label: string }) {
       className={`group relative inline-flex min-h-11 items-center overflow-hidden rounded-full px-4 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 ${
         isActive
           ? "bg-moss text-ink shadow-[0_12px_32px_rgba(255,208,47,0.24)]"
-          : "text-orange-200 hover:bg-white/10 hover:text-orange-100"
+          : "text-slate-200 hover:bg-white/10 hover:text-white"
       }`}
       href={href}
     >

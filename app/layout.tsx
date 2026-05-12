@@ -8,16 +8,16 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3001";
 
 export const metadata: Metadata = {
   title: {
-    default: "My Portfolio",
-    template: "%s | My Portfolio"
+    default: "John Raymond Gallego Portfolio",
+    template: "%s | John Raymond Gallego Portfolio"
   },
   description:
-    "Johnraymond Gallego's 4th year internship portfolio at Makerspace InnovHub, featuring frontend and backend projects built with Node.js, EJS, Tailwind CSS, and Vercel.",
+    "John Raymond Gallego's internship portfolio at Makerspace InnovHub, featuring frontend and backend work built with Node.js, EJS, Tailwind CSS, and Vercel.",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "My Portfolio",
+    title: "John Raymond Gallego Portfolio",
     description:
-      "4th year internship project work at Makerspace InnovHub, including Practice Web and H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL.",
+      "Internship project work at Makerspace InnovHub, including Practice Web and the H4M Workforce Accountability, Attendance, and Payroll platform.",
     type: "website"
   }
 };

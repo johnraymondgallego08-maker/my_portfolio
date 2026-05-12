@@ -36,16 +36,16 @@ export function ProjectGalleryModal({
     <ModalShell labelledBy="gallery-title" maxWidth="max-w-7xl" onClose={onClose}>
       <header className="flex shrink-0 items-start justify-between gap-3 border-b border-clay/15 bg-night px-3 py-3 text-orange-200 sm:gap-4 sm:px-5">
         <div className="min-w-0">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-300">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-moss">
             Full project
           </p>
-          <h3 className="break-words text-base font-bold tracking-normal text-orange-300 sm:text-lg" id="gallery-title">
+          <h3 className="break-words text-base font-bold tracking-normal text-white sm:text-lg" id="gallery-title">
             {project.title}
           </h3>
         </div>
         <button
           aria-label="Close gallery"
-          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-white/15 text-lg font-bold text-orange-200 transition hover:border-moss hover:text-orange-100"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-white/15 text-lg font-bold text-slate-100 transition hover:border-moss hover:text-white"
           onClick={onClose}
           type="button"
         >

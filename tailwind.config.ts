@@ -25,29 +25,27 @@ const config: Config = {
       },
       fontFamily: {
         sans: [
+          "var(--font-body)",
           "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
           "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
           "sans-serif"
         ],
         display: [
-          "Segoe UI Variable Display",
+          "var(--font-display)",
           "Inter",
           "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
           "sans-serif"
         ],
         ui: [
-          "Segoe UI Variable Text",
+          "var(--font-body)",
           "Inter",
+          "ui-sans-serif",
+          "system-ui",
           "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
           "sans-serif"
         ]
       },

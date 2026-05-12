@@ -49,13 +49,13 @@ function LogModal({
         <header className="relative flex shrink-0 items-start justify-between gap-3 overflow-hidden border-b border-clay/15 bg-night px-3 py-4 text-orange-200 sm:gap-4 sm:px-6">
           <div className="absolute inset-0 animate-drift-grid bg-[linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:36px_36px]" />
           <div className="relative min-w-0 space-y-2">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-300">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-moss">
               Build log
             </p>
-            <h2 className="break-words text-xl font-bold tracking-normal text-orange-300 sm:text-2xl" id="log-modal-title">
+            <h2 className="break-words text-xl font-bold tracking-normal text-white sm:text-2xl" id="log-modal-title">
               {log.title}
             </h2>
-            <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-orange-200">
+            <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-slate-200">
               <time dateTime={log.date}>{formatDate(log.date)}</time>
               <span className="text-moss" aria-hidden="true">/</span>
               <span>{log.readingMinutes} min read</span>
@@ -63,7 +63,7 @@ function LogModal({
           </div>
           <button
             aria-label="Close log"
-            className="relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-white/15 text-lg font-bold text-orange-200 transition duration-300 hover:-translate-y-0.5 hover:border-moss hover:text-orange-100"
+            className="relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-white/15 text-lg font-bold text-slate-100 transition duration-300 hover:-translate-y-0.5 hover:border-moss hover:text-white"
             onClick={onClose}
             type="button"
           >

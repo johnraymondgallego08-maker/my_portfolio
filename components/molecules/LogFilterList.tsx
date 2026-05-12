@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { Button } from "@/components/atoms/Button";
 import { GridIcon, SearchIcon, TagIcon } from "@/components/atoms/Icons";
 import { LogModalList } from "@/components/molecules/LogModalList";
 import type { LogEntry } from "@/lib/types";
@@ -80,7 +81,27 @@ export function LogFilterList({ logs }: { logs: LogEntry[] }) {
         Showing {filteredLogs.length} of {logs.length} logs.
       </p>
 
-      <LogModalList logs={filteredLogs} />
+      {filteredLogs.length === 0 ? (
+        <div className="rounded-md border border-dashed border-clay/25 bg-white/80 p-6 text-center shadow-soft">
+          <h3 className="text-xl font-bold text-ink">No matching logs found</h3>
+          <p className="mt-2 text-sm leading-6 text-slate-600">
+            Adjust the search or clear the selected tag to bring the weekly entries back into view.
+          </p>
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
+            <Button
+              onClick={() => {
+                setSearch("");
+                setActiveTag("All");
+              }}
+              variant="primary"
+            >
+              Clear filters
+            </Button>
+          </div>
+        </div>
+      ) : (
+        <LogModalList logs={filteredLogs} />
+      )}
     </section>
   );
 }

@@ -98,21 +98,42 @@ export function WorkGallery({
         Showing {filteredProjects.length} of {projects.length} activities.
       </p>
 
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {filteredProjects.map((project, index) => (
-          <div
-            className="motion-safe:animate-scale-in"
-            key={`${project.title}-${project.completionDate}`}
-            style={{ animationDelay: `${index * 85}ms` }}
-          >
-            <ProjectCard
-              galleryCount={getProjectGallery(project).length}
-              onOpenGallery={() => openGallery(project)}
-              project={project}
-            />
+      {filteredProjects.length === 0 ? (
+        <div className="rounded-md border border-dashed border-clay/25 bg-white/80 p-6 text-center shadow-soft">
+          <h3 className="text-xl font-bold text-ink">No matching projects found</h3>
+          <p className="mt-2 text-sm leading-6 text-slate-600">
+            Try a different search term or clear the active filters to see all project work again.
+          </p>
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
+            <Button
+              onClick={() => {
+                setSearch("");
+                setCategory(ALL_FILTER_VALUE);
+                setTech(ALL_FILTER_VALUE);
+              }}
+              variant="primary"
+            >
+              Clear filters
+            </Button>
           </div>
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredProjects.map((project, index) => (
+            <div
+              className="motion-safe:animate-scale-in"
+              key={`${project.title}-${project.completionDate}`}
+              style={{ animationDelay: `${index * 85}ms` }}
+            >
+              <ProjectCard
+                galleryCount={getProjectGallery(project).length}
+                onOpenGallery={() => openGallery(project)}
+                project={project}
+              />
+            </div>
+          ))}
+        </div>
+      )}
 
       {activeProject ? (
         <ProjectGalleryModal
