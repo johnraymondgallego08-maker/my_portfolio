@@ -10,6 +10,7 @@ const categoryImages: Record<string, string> = {
 
 const defaultProjectImage = "/images/frontend-system.svg";
 const h4mBase = "/images/real project admin panel of attendance monitoring app";
+const h4mPreviewImage = `${h4mBase}/employee directory.png`;
 const h4mGalleryFiles = [
   "project profile.png",
   "employee directory.png",
@@ -50,6 +51,10 @@ const h4mGalleryFiles = [
 ];
 
 export function getProjectImage(project: Project): string {
+  if (project.id === "h4m-workforce") {
+    return h4mPreviewImage;
+  }
+
   return project.image ?? categoryImages[project.category] ?? defaultProjectImage;
 }
 
@@ -57,12 +62,9 @@ export function getProjectGallery(project: Project): ProjectGalleryImage[] {
   if (project.id === "h4m-workforce") {
     return h4mGalleryFiles.map((file) => ({
       src: `${h4mBase}/${file}`,
-      alt: `${project.title} ${file.replace(/\.png$/, "")}`,
+      alt: `${project.title}: ${formatH4mLabel(file)}`,
       group: inferH4mGroup(file),
-      caption: file
-        .replace(/\.png$/, "")
-        .replace(/\s+/g, " ")
-        .trim()
+      caption: formatH4mLabel(file)
     }));
   }
 
@@ -87,4 +89,19 @@ function inferH4mGroup(file: string): string {
   }
 
   return "Project Overview";
+}
+
+function formatH4mLabel(file: string): string {
+  return file
+    .replace(/\.png$/i, "")
+    .replace(/\bweel\b/i, "Week")
+    .replace(/\bdashbopard\b/i, "dashboard")
+    .replace(/\benhaancement\b/i, "enhancement")
+    .replace(/\blog in\b/i, "login")
+    .replace(/\bui\b/g, "UI")
+    .replace(/\bvercel\b/g, "Vercel")
+    .replace(/\bpop up\b/i, "pop-up")
+    .replace(/\blay out\b/i, "layout")
+    .replace(/\s+/g, " ")
+    .trim();
 }
