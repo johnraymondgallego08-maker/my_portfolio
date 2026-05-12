@@ -19,11 +19,11 @@ This activity focused on understanding the real problem behind the Workforce Acc
 
 ## Research Photos
 
-![Research cover and overview board](/images/research%201/proofile.png)
+![Research cover and overview board](/research%201/proofile.png)
 
-![Problem statement board for workforce accountability](/images/research%201/problem.png)
+![Problem statement board for workforce accountability](/research%201/problem.png)
 
-![Empathy map used during the research process](/images/research%201/empathy%20map.png)
+![Empathy map used during the research process](/research%201/empathy%20map.png)
 
 ## Outcome
 
