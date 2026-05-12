@@ -6,7 +6,7 @@ import { getLogs } from "@/lib/logs";
 export const metadata: Metadata = {
   title: "Logs",
   description:
-    "Search and filter weekly build notes about Node.js, EJS, Tailwind CSS, and the H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL project."
+    "Search and filter portfolio logs covering practice work, project development, and research entries."
 };
 
 export default async function LogsPage() {
@@ -21,13 +21,13 @@ export default async function LogsPage() {
           <div className="max-w-3xl space-y-4 motion-safe:animate-fade-up">
             <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-moss">
               <NotebookIcon className="h-4 w-4" />
-              Build Logs
+              Portfolio Logs
             </p>
             <h1 className="text-3xl font-black tracking-normal text-white sm:text-5xl">
-              Weekly notes from practice to real project deployment.
+              Build logs and research notes in one timeline.
             </h1>
             <p className="text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
-              Search by title or summary, then filter by log tags and dates.
+              Search by title or summary, then filter practice work, project updates, and research entries by tag.
             </p>
           </div>
         </div>

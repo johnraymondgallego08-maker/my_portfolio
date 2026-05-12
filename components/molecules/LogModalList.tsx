@@ -18,7 +18,7 @@ export function LogModalList({ logs }: { logs: LogEntry[] }) {
 
   return (
     <>
-      <section className="grid items-stretch gap-5 md:grid-cols-2" aria-label="Weekly logs">
+      <section className="grid items-stretch gap-5 md:grid-cols-2" aria-label="Portfolio logs">
         {logs.map((log, index) => (
           <div
             className="h-full motion-safe:animate-scale-in"
@@ -44,13 +44,15 @@ function LogModal({
   log: LogEntry;
   onClose: () => void;
 }) {
+  const logLabel = getLogLabel(log);
+
   return (
     <ModalShell labelledBy="log-modal-title" onClose={onClose}>
         <header className="relative flex shrink-0 items-start justify-between gap-3 overflow-hidden border-b border-clay/15 bg-night px-3 py-4 text-orange-200 sm:gap-4 sm:px-6">
           <div className="absolute inset-0 animate-drift-grid bg-[linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:36px_36px]" />
           <div className="relative min-w-0 space-y-2">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-moss">
-              Build log
+              {logLabel}
             </p>
             <h2 className="break-words text-xl font-bold tracking-normal text-white sm:text-2xl" id="log-modal-title">
               {log.title}
@@ -100,4 +102,10 @@ function LogModal({
         </div>
     </ModalShell>
   );
+}
+
+function getLogLabel(log: LogEntry): string {
+  const hasResearchTag = log.tags.some((tag) => /research/i.test(tag));
+
+  return hasResearchTag ? "Research entry" : "Build log";
 }

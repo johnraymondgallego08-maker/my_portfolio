@@ -1,13 +1,13 @@
 ---
-title: Research: Workforce Accountability Discovery
+title: Research 1: Workforce Accountability and Attendance
 date: 2026-04-10
-summary: Researched the attendance and payroll problem by defining user pain points, building a persona, creating an empathy map, and brainstorming secure monitoring solutions.
-tags: Research, UX Research, Workforce Accountability
+summary: Research 1 focused on workforce accountability and attendance by defining user pain points, building a persona, creating an empathy map, and brainstorming secure monitoring solutions.
+tags: Research 1, UX Research, Workforce Accountability, Attendance
 ---
 
 ## Focus
 
-This activity focused on understanding the real problem behind the Workforce Accountability and Attendance System before moving deeper into implementation. The research looked at how manual attendance records, delayed reporting, and scattered files can affect payroll accuracy and workforce monitoring.
+This activity focused on understanding the real problem behind the Workforce Accountability and Attendance System before moving deeper into implementation. Research 1 looked at how manual attendance records, delayed reporting, and scattered files can affect payroll accuracy and workforce monitoring.
 
 ## Research Notes
 
@@ -27,4 +27,4 @@ This activity focused on understanding the real problem behind the Workforce Acc
 
 ## Outcome
 
-The research clarified what the system needed to solve: accurate attendance validation, faster monitoring, cleaner payroll support, and a more trustworthy record process for both employees and administrators.
+Research 1 clarified what the system needed to solve: accurate attendance validation, faster monitoring, cleaner payroll support, and a more trustworthy record process for both employees and administrators.

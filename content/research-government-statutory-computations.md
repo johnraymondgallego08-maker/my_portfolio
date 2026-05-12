@@ -1,13 +1,13 @@
 ---
-title: Research: Government Statutory Computations
+title: Research 2: Philippine Payroll
 date: 2026-02-24
-summary: Researched government statutory payroll computations and organized contribution and deduction references for payroll system planning.
-tags: Research, Payroll Research, Statutory Computation
+summary: Research 2 focused on Philippine payroll by studying government statutory computations and organizing contribution and deduction references for payroll system planning.
+tags: Research 2, Payroll Research, Philippine Payroll, Statutory Computation
 ---
 
 ## Focus
 
-This activity focused on researching government statutory computations used in payroll processing. The goal was to understand the required employee deductions and employer contribution concepts before connecting them to payroll system workflows.
+This activity focused on researching Philippine payroll computations used in payroll processing. The goal was to understand the required employee deductions and employer contribution concepts before connecting them to payroll system workflows.
 
 ## Research Notes
 
@@ -25,4 +25,4 @@ This activity focused on researching government statutory computations used in p
 
 ## Outcome
 
-The research created a clearer foundation for building payroll features that can handle statutory deductions, contribution references, payroll accuracy, and compliance-ready reporting.
+Research 2 created a clearer foundation for building payroll features that can handle statutory deductions, contribution references, payroll accuracy, and compliance-ready reporting.
