@@ -19,9 +19,9 @@ This activity focused on researching Philippine payroll computations used in pay
 
 ## Research Photos
 
-![Research cover for statutory payroll computations](/research%202/profile.png)
+![Research cover for statutory payroll computations](/images/research%202/profile.png)
 
-![Statutory computation reference table used for payroll planning](/research%202/research%20%20%282%29.png)
+![Statutory computation reference table used for payroll planning](/images/research%202/research%20%20%282%29.png)
 
 ## Outcome
 
