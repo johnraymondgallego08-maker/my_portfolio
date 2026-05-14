@@ -34,7 +34,7 @@ export function ProjectCard({
       {onOpenGallery ? (
         <button
           aria-label={`Open ${project.title} gallery`}
-          className="group relative aspect-[16/10] w-full min-w-0 overflow-hidden bg-white text-left"
+          className="group relative aspect-[16/10] min-h-11 w-full min-w-0 overflow-hidden bg-white text-left"
           onClick={onOpenGallery}
           type="button"
         >

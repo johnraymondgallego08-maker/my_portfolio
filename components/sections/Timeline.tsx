@@ -43,7 +43,7 @@ export function Timeline({ projects }: { projects: Project[] }) {
             >
               <button
                 aria-label={`Open ${project.title} project details`}
-                className="animated-border panel-gradient group relative grid w-full gap-3 rounded-md border border-clay/15 p-5 pl-10 text-left shadow-soft transition duration-500 hover:-translate-y-1 hover:border-clay/35 hover:shadow-glow sm:grid-cols-[10rem_1fr] sm:pl-5"
+                className="animated-border panel-gradient group relative grid min-h-11 w-full gap-3 rounded-md border border-clay/15 p-5 pl-10 text-left shadow-soft transition duration-500 hover:-translate-y-1 hover:border-clay/35 hover:shadow-glow sm:grid-cols-[10rem_1fr] sm:pl-5"
                 onClick={() => openGallery(project)}
                 type="button"
               >

@@ -11,7 +11,7 @@ export function ImageGallery({ images }: { images: string[] }) {
         <h3 className="text-lg font-bold text-white">Project Screenshots</h3>
         <button 
           onClick={() => images.length > 0 && setSelectedImg(images[0])}
-          className="text-sm font-bold text-moss hover:underline"
+          className="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-bold text-moss transition hover:bg-white/10 hover:underline"
         >
           View images
         </button>
@@ -22,7 +22,7 @@ export function ImageGallery({ images }: { images: string[] }) {
           <button 
             key={idx} 
             onClick={() => setSelectedImg(src)}
-            className="relative aspect-video overflow-hidden rounded-lg border border-white/10 hover:opacity-90 transition-opacity"
+            className="relative aspect-video min-h-11 overflow-hidden rounded-lg border border-white/10 transition-opacity hover:opacity-90"
           >
             <Image 
               src={src} 

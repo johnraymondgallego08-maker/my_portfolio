@@ -4,19 +4,21 @@ import { WorkGallery } from "@/components/molecules/WorkGallery";
 import {
   getProjectCategories,
   getProjects,
-  getProjectTechOptions
+  getProjectTechOptions,
+  getProjectTimeOptions
 } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Search and filter frontend, backend, attendance, and payroll projects by category or tech stack."
+    "Search and filter frontend, backend, attendance, and payroll projects by time, category, or tech stack."
 };
 
 export default function WorkPage() {
   const projects = getProjects();
   const categories = getProjectCategories(projects);
   const techOptions = getProjectTechOptions(projects);
+  const timeOptions = getProjectTimeOptions(projects);
 
   return (
     <div>
@@ -33,7 +35,7 @@ export default function WorkPage() {
               Frontend, backend, attendance, and payroll builds.
             </h1>
             <p className="text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
-              Search by title or description, then filter by category and tech stack.
+              Search by title or description, then filter by time, category, and tech stack.
             </p>
           </div>
         </div>
@@ -43,6 +45,7 @@ export default function WorkPage() {
           categories={categories}
           projects={projects}
           techOptions={techOptions}
+          timeOptions={timeOptions}
         />
       </div>
     </div>

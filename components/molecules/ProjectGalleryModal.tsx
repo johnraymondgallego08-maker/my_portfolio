@@ -111,7 +111,7 @@ export function ProjectGalleryModal({
                     <button
                       aria-label={`Show image ${index + 1}`}
                       aria-pressed={activeImageIndex === index}
-                      className={`relative aspect-[16/10] overflow-hidden rounded-md border bg-white transition ${
+                      className={`relative aspect-[16/10] min-h-11 overflow-hidden rounded-md border bg-white transition ${
                         activeImageIndex === index
                           ? "border-moss ring-2 ring-moss/30"
                           : "border-clay/15 hover:-translate-y-0.5 hover:border-moss"

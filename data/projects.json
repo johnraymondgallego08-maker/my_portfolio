@@ -3,7 +3,8 @@
     "id": "h4m-workforce",
     "title": "H4M WORKFORCE ACCOUNTABILITY ATTENDANCE AND PAYROLL",
     "description": "Full-stack admin system for employee records, attendance monitoring, payroll workflows, and reports.",
-    "tags": ["Node.js", "EJS", "Tailwind CSS", "Vercel"],
+    "techStack": ["Node.js", "EJS", "Tailwind CSS", "Vercel"],
+    "category": "Real Project",
     "startDate": "2026-03",
     "completionDate": "2026-04",
     "images": [
@@ -19,7 +20,8 @@
     "id": "practice-web",
     "title": "Practice Web",
     "description": "Two-week practice project for core backend and UI concepts.",
-    "tags": ["Node.js", "EJS", "Tailwind CSS"],
+    "techStack": ["Node.js", "EJS", "Tailwind CSS"],
+    "category": "Practice Project",
     "startDate": "2026-03",
     "completionDate": "2026-03",
     "images": [

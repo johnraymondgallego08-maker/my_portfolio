@@ -39,6 +39,18 @@ export function getProjectTechOptions(projects: Project[]): FilterOption[] {
   return uniqueOptions(projects.flatMap((project) => project.techStack));
 }
 
+export function getProjectTimeOptions(projects: Project[]): FilterOption[] {
+  return Array.from(
+    new Map(
+      projects.map((project) => {
+        const value = project.completionDate.slice(0, 7);
+
+        return [value, { label: formatProjectMonth(value), value }];
+      })
+    ).values()
+  ).sort((first, second) => second.value.localeCompare(first.value));
+}
+
 function normalizeProject(raw: RawProject): Project {
   const title = requireString(raw.title, "title");
   const description = requireString(raw.description, "description");
@@ -150,4 +162,13 @@ function uniqueOptions(values: string[]): FilterOption[] {
 function parseProjectDate(value: string): Date {
   const normalized = /^\d{4}-\d{2}$/.test(value) ? `${value}-01` : value;
   return new Date(`${normalized}T00:00:00`);
+}
+
+function formatProjectMonth(value: string): string {
+  const date = parseProjectDate(value);
+
+  return new Intl.DateTimeFormat("en", {
+    month: "long",
+    year: "numeric"
+  }).format(date);
 }

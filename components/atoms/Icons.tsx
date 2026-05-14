@@ -70,6 +70,20 @@ export function CloudLaunchIcon(props: IconProps) {
   );
 }
 
+export function CalendarIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <rect x="4" y="5" width="16" height="15" rx="2" />
+      <path d="M8 3.5v3" />
+      <path d="M16 3.5v3" />
+      <path d="M4 9h16" />
+      <path d="M8 13h2" />
+      <path d="M14 13h2" />
+      <path d="M8 17h2" />
+    </IconBase>
+  );
+}
+
 export function CodeIcon(props: IconProps) {
   return (
     <IconBase {...props}>
@@ -147,6 +161,75 @@ export function GridIcon(props: IconProps) {
       <rect x="14" y="4" width="6" height="6" rx="1.2" />
       <rect x="4" y="14" width="6" height="6" rx="1.2" />
       <rect x="14" y="14" width="6" height="6" rx="1.2" />
+    </IconBase>
+  );
+}
+
+export function BriefcaseIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="M9 7V5.8A1.8 1.8 0 0 1 10.8 4h2.4A1.8 1.8 0 0 1 15 5.8V7" />
+      <rect x="4" y="7" width="16" height="12" rx="2" />
+      <path d="M4 12.5h16" />
+      <path d="M10 12.5v1.2h4v-1.2" />
+    </IconBase>
+  );
+}
+
+export function BuildingIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="M5 20V5.8A1.8 1.8 0 0 1 6.8 4h10.4A1.8 1.8 0 0 1 19 5.8V20" />
+      <path d="M3.5 20h17" />
+      <path d="M8 8h2" />
+      <path d="M14 8h2" />
+      <path d="M8 12h2" />
+      <path d="M14 12h2" />
+      <path d="M10 20v-4h4v4" />
+    </IconBase>
+  );
+}
+
+export function EmailIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <rect x="4" y="6" width="16" height="12" rx="2" />
+      <path d="m5 8 7 5 7-5" />
+    </IconBase>
+  );
+}
+
+export function FacebookIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="M14 8h2V4.8A10 10 0 0 0 13.6 4C11.2 4 10 5.5 10 7.8V10H7.5v3.4H10V20h3.5v-6.6H16l.5-3.4h-3V8.2c0-.8.2-1.2.5-1.4Z" />
+    </IconBase>
+  );
+}
+
+export function GraduationCapIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="m3.5 8.5 8.5-4 8.5 4-8.5 4-8.5-4Z" />
+      <path d="M7 10.3v4.2c1.3 1.2 3 1.8 5 1.8s3.7-.6 5-1.8v-4.2" />
+      <path d="M20.5 8.5v5" />
+    </IconBase>
+  );
+}
+
+export function PhoneIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="M8.4 5.2 10 8.8a1.4 1.4 0 0 1-.4 1.6l-1.2 1a10 10 0 0 0 4.2 4.2l1-1.2a1.4 1.4 0 0 1 1.6-.4l3.6 1.6a1.5 1.5 0 0 1 .9 1.6l-.4 2a1.7 1.7 0 0 1-1.7 1.3A13.6 13.6 0 0 1 4 6.4a1.7 1.7 0 0 1 1.3-1.7l2-.4a1.5 1.5 0 0 1 1.1.9Z" />
+    </IconBase>
+  );
+}
+
+export function XIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="m6 6 12 12" />
+      <path d="M18 6 6 18" />
     </IconBase>
   );
 }

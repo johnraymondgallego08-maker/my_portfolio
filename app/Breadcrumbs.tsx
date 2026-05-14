@@ -8,7 +8,7 @@ interface BreadcrumbItem {
 export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
     <nav className="mb-6 flex items-center space-x-2 px-1 text-sm text-slate-500" aria-label="Breadcrumb">
-      <Link className="transition-colors hover:text-clay" href="/">
+      <Link className="inline-flex min-h-11 items-center transition-colors hover:text-clay" href="/">
         Home
       </Link>
       {items.map((item, index) => (
@@ -18,7 +18,7 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
           </span>
           {item.href ? (
             <Link
-              className="whitespace-nowrap transition-colors hover:text-clay"
+              className="inline-flex min-h-11 items-center whitespace-nowrap transition-colors hover:text-clay"
               href={item.href}
             >
               {item.label}

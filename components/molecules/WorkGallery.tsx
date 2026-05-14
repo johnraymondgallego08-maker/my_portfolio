@@ -2,7 +2,13 @@
 
 import { useCallback, useMemo, useState } from "react";
 import { Button } from "@/components/atoms/Button";
-import { GridIcon, LayersIcon, SearchIcon, TagIcon } from "@/components/atoms/Icons";
+import {
+  CalendarIcon,
+  GridIcon,
+  LayersIcon,
+  SearchIcon,
+  TagIcon
+} from "@/components/atoms/Icons";
 import { ProjectGalleryModal } from "@/components/molecules/ProjectGalleryModal";
 import { ProjectCard } from "@/components/molecules/ProjectCard";
 import { ALL_FILTER_VALUE, filterProjects } from "@/lib/filters";
@@ -13,14 +19,17 @@ import type { FilterOption, Project } from "@/lib/types";
 export function WorkGallery({
   projects,
   categories,
-  techOptions
+  techOptions,
+  timeOptions
 }: {
   projects: Project[];
   categories: FilterOption[];
   techOptions: FilterOption[];
+  timeOptions: FilterOption[];
 }) {
   const [category, setCategory] = useState(ALL_FILTER_VALUE);
   const [tech, setTech] = useState(ALL_FILTER_VALUE);
+  const [time, setTime] = useState(ALL_FILTER_VALUE);
   const [search, setSearch] = useState("");
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -29,7 +38,7 @@ export function WorkGallery({
   const filteredProjects = useMemo(() => {
     const query = search.trim().toLowerCase();
 
-    return filterProjects(projects, { category, tech }).filter((project) => {
+    return filterProjects(projects, { category, tech, time }).filter((project) => {
       if (!query) {
         return true;
       }
@@ -38,13 +47,14 @@ export function WorkGallery({
         project.title,
         project.description,
         project.category,
+        project.completionDate,
         ...project.techStack
       ]
         .join(" ")
         .toLowerCase()
         .includes(query);
     });
-  }, [category, projects, search, tech]);
+  }, [category, projects, search, tech, time]);
 
   const activeGallery = useMemo(
     () => (activeProject ? getProjectGallery(activeProject) : []),
@@ -92,6 +102,12 @@ export function WorkGallery({
           selected={tech}
           onSelect={setTech}
         />
+        <FilterGroup
+          label="Time"
+          options={timeOptions}
+          selected={time}
+          onSelect={setTime}
+        />
       </div>
 
       <p aria-live="polite" className="text-sm font-semibold text-navy">
@@ -110,6 +126,7 @@ export function WorkGallery({
                 setSearch("");
                 setCategory(ALL_FILTER_VALUE);
                 setTech(ALL_FILTER_VALUE);
+                setTime(ALL_FILTER_VALUE);
               }}
               variant="primary"
             >
@@ -159,7 +176,8 @@ function FilterGroup({
   selected: string;
   onSelect: (value: string) => void;
 }) {
-  const Icon = label === "Category" ? TagIcon : LayersIcon;
+  const Icon =
+    label === "Category" ? TagIcon : label === "Time" ? CalendarIcon : LayersIcon;
 
   return (
     <fieldset className="space-y-3">

@@ -20,6 +20,7 @@ export function SiteHeader() {
         </Link>
         <div className="flex min-w-0 flex-wrap gap-2">
           <NavLink href="/" label="Home" />
+          <NavLink href="/about" label="About" />
           <NavLink href="/work" label="Work" />
           <NavLink href="/logs" label="Logs" />
         </div>
