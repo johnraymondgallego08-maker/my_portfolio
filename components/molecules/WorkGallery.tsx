@@ -13,6 +13,7 @@ import { ProjectGalleryModal } from "@/components/molecules/ProjectGalleryModal"
 import { ProjectCard } from "@/components/molecules/ProjectCard";
 import { ALL_FILTER_VALUE, filterProjects } from "@/lib/filters";
 import { getProjectGallery } from "@/lib/project-images";
+import { matchesSearch } from "@/lib/search";
 import { useModalLifecycle } from "@/lib/useModalLifecycle";
 import type { FilterOption, Project } from "@/lib/types";
 
@@ -36,23 +37,14 @@ export function WorkGallery({
   const closeGallery = useCallback(() => setActiveProject(null), []);
 
   const filteredProjects = useMemo(() => {
-    const query = search.trim().toLowerCase();
-
     return filterProjects(projects, { category, tech, time }).filter((project) => {
-      if (!query) {
-        return true;
-      }
-
-      return [
+      return matchesSearch([
         project.title,
         project.description,
         project.category,
         project.completionDate,
         ...project.techStack
-      ]
-        .join(" ")
-        .toLowerCase()
-        .includes(query);
+      ], search);
     });
   }, [category, projects, search, tech, time]);
 

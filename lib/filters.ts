@@ -12,13 +12,20 @@ export function filterProjects(
   projects: Project[],
   { category, tech, time }: ProjectFilter
 ): Project[] {
+  const selectedCategory = category.toLowerCase();
+  const selectedTech = tech.toLowerCase();
+  const selectedTime = time.toLowerCase();
+
   return projects.filter((project) => {
     const matchesCategory =
-      category === ALL_FILTER_VALUE || project.category === category;
+      selectedCategory === ALL_FILTER_VALUE ||
+      project.category.toLowerCase() === selectedCategory;
     const matchesTech =
-      tech === ALL_FILTER_VALUE || project.techStack.includes(tech);
+      selectedTech === ALL_FILTER_VALUE ||
+      project.techStack.some((item) => item.toLowerCase() === selectedTech);
     const matchesTime =
-      time === ALL_FILTER_VALUE || project.completionDate.startsWith(time);
+      selectedTime === ALL_FILTER_VALUE ||
+      project.completionDate.toLowerCase().startsWith(selectedTime);
 
     return matchesCategory && matchesTech && matchesTime;
   });

@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Button } from "@/components/atoms/Button";
 import { GridIcon, SearchIcon, TagIcon } from "@/components/atoms/Icons";
 import { LogModalList } from "@/components/molecules/LogModalList";
+import { matchesSearch, normalizeSearchText } from "@/lib/search";
 import type { LogEntry } from "@/lib/types";
 
 export function LogFilterList({ logs }: { logs: LogEntry[] }) {
@@ -15,18 +16,18 @@ export function LogFilterList({ logs }: { logs: LogEntry[] }) {
   );
 
   const filteredLogs = useMemo(() => {
-    const query = search.trim().toLowerCase();
+    const selectedTag = normalizeSearchText(activeTag);
 
     return logs.filter((log) => {
-      const matchesSearch =
-        !query ||
-        [log.title, log.summary, ...log.tags]
-          .join(" ")
-          .toLowerCase()
-          .includes(query);
-      const matchesTag = activeTag === "All" || log.tags.includes(activeTag);
+      const matchesQuery = matchesSearch(
+        [log.title, log.summary, log.body, ...log.tags],
+        search
+      );
+      const matchesTag =
+        selectedTag === "all" ||
+        log.tags.some((tag) => normalizeSearchText(tag) === selectedTag);
 
-      return matchesSearch && matchesTag;
+      return matchesQuery && matchesTag;
     });
   }, [activeTag, logs, search]);
 
