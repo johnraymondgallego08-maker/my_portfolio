@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import { createPortal } from "react-dom";
 
 export function ModalShell({
   children,
@@ -13,7 +14,11 @@ export function ModalShell({
   maxWidth?: string;
   onClose: () => void;
 }) {
-  return (
+  if (typeof document === "undefined") {
+    return null;
+  }
+
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-stretch justify-center bg-night/70 p-0 backdrop-blur-[2px] motion-safe:animate-fade-up sm:items-center sm:p-4"
       onClick={onClose}
@@ -27,6 +32,7 @@ export function ModalShell({
       >
         {children}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
